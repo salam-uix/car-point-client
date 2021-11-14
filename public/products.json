@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Romania",
+        "packagename": "AlphaOne",
+        "price": "3300",
+        "duration": "6 Days",
+        "description": "Romania is a southeastern European country known for the forested region of Transylvania",
+        "img": "https://i.ibb.co/1v4VSQv/trip01.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Nayagra water falls",
+        "packagename": "AlphaTwo",
+        "price": "$3000",
+        "duration": "8 Days",
+        "description": "Romania is a southeastern European country known for the forested region of Transylvania",
+        "img": "https://i.ibb.co/Q6zSCFX/trip02.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Turkey",
+        "packagename": "AlphaThree",
+        "price": "$2200",
+        "duration": "8 Days",
+        "description": "Romania is a southeastern European country known for the forested region of Transylvania",
+        "img": "https://i.ibb.co/Bcvg1mN/trip03.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Phuket Thiland",
+        "packagename": "AlphaTwo",
+        "price": "$1100",
+        "duration": "7 Days",
+        "description": "Romania is a southeastern European country known for the forested region of Transylvania",
+        "img": "https://i.ibb.co/6WQnyJw/trip04.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Indonesia",
+        "packagename": "AlphaFive",
+        "price": "$950",
+        "duration": "8 Days",
+        "description": "Romania is a southeastern European country known for the forested region of Transylvania",
+        "img": "https://i.ibb.co/VWkJfDY/trip05.jpgg"
+    },
+    {
+        "id": 6,
+        "name": "Russia",
+        "packagename": "AlphaSix",
+        "price": "$2500",
+        "duration": "12 Days",
+        "description": "Romania is a southeastern European country known for the forested region of Transylvania",
+        "img": "https://i.ibb.co/hmFzbpw/trip06.jpg"
+    }
+]

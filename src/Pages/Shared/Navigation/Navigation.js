@@ -10,11 +10,7 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material';
@@ -95,6 +91,7 @@ const Navigation = () => {
                         <Box className={navContainer}>
                             <Link className={naveItem} to="/"><Button color="inherit">Home</Button></Link>
                             <Link className={naveItem} to="/login"><Button color="inherit">Login</Button></Link>
+
                         </Box>
 
                     </Toolbar>
