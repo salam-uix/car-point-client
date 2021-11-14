@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid, Button } from '@mui/material';
 import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -25,6 +25,7 @@ const Product = (props) => {
                     </Typography>
                 </CardContent>
             </Card>
+            <Button variant="contained">Buy now</Button>
 
         </Grid>
     );
