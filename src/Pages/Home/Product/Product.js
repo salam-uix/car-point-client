@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 const Product = (props) => {
-    const { name, description, img } = props.product;
+    const { name, description, img, price } = props.product;
     return (
         <Grid item xs={4} sm={4} md={4}>
             <Card sx={{ minWidth: 275, border: 0, boxShadow: 0 }}>
@@ -20,12 +20,12 @@ const Product = (props) => {
                     <Typography variant="h5" component="div">
                         {name}
                     </Typography>
-                    <Typography variant="body2">
-                        {description}
+                    <Typography sx={{ mt: 2 }} variant="body1">
+                        {price}
                     </Typography>
                 </CardContent>
             </Card>
-            <Button variant="contained">Buy now</Button>
+            <Button variant="contained">Order now</Button>
 
         </Grid>
     );

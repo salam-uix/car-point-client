@@ -6,9 +6,7 @@ import { Button, Container, Typography } from '@mui/material';
 import './Banner.css';
 
 
-const bannerBg = {
-    backgroung: `url(${carBanner})`,
-}
+
 
 const verticalCenter = {
     display: 'flex',
