@@ -1,10 +1,28 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Car Point](https://car-point-65fc6.web.app/).
 
 ## Available Scripts
 
-In the project directory, you can run:
+In this i use css, bootstrap, react.js, react router dom, firebase, mongodb, heroku etc
+
+### `Firebase`
+
+This project i include google sign in using firebase. Just click on google sign in then it will redirect to your gmail authentication.
+
+### `PrivateRoute`
+
+There is a private route functionality to prevent non register user acces. So it will be safe for user.
+
+### `Destructuring`
+
+I use destructure method to use data dinamicaly. 
+
+### `Admin Dashbord`
+
+I included admin dashbord to add, update or delete data.
+
+### `Email authentication`
 
 ### `npm start`
 

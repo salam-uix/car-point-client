@@ -18,7 +18,7 @@ const Products = () => {
     }, [])
     return (
         <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
-            <Typography variant="h4" sx={{ mt: 4 }}>
+            <Typography variant="h4" sx={{ my: 5 }}>
                 Best of our Products
             </Typography>
             <Container>

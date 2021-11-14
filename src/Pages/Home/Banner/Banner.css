@@ -1,0 +1,5 @@
+.banner-bg{
+    /* background-image: url(https://i.ibb.co/7Sg8gHV/car-for-banner.jpg); */
+    background-image: linear-gradient(rgba(6, 6, 49, 0.5), rgba(26, 26, 24, 0.5)),
+                  url(https://i.ibb.co/7Sg8gHV/car-for-banner.jpg);
+}

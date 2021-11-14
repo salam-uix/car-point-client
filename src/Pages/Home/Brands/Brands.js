@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const Brands = () => {
     return (
-        <Container className="my-5">
+        <Container className="mb-5">
             <h4 className="text-center mb-5">Our Top Brands</h4>
             <Row>
                 <Col>
