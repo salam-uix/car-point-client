@@ -17,9 +17,6 @@ const Product = (props) => {
                     alt="green iguana"
                 />
                 <CardContent>
-                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        Word of the Day
-                    </Typography>
                     <Typography variant="h5" component="div">
                         {name}
                     </Typography>
