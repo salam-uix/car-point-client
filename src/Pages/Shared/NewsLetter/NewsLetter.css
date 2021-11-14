@@ -1,0 +1,32 @@
+.super-container{
+    padding: 50px;
+}
+.subscribe-container{
+    border: 2px solid #1976D2;
+    width: 400px;
+    margin: 0 auto;
+    height: 50px;
+    border-radius: 30px;
+    position: relative;
+    
+}
+.subscribe-container> input{
+    border: none;
+}
+.subscribe-container .inputfield{
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    left: 5%;
+}
+.subscribe-container .submitfield{
+    position: absolute;
+    right: 0%;
+    height: 100%;
+    background-color: #1976D2;
+    overflow: hidden;
+    color: white;
+    font-weight: 600;
+    padding: 0 15px;
+    border-radius: 0 30px 30px 0px;
+}
