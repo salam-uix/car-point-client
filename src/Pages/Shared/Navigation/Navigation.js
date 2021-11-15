@@ -89,7 +89,7 @@ const Navigation = () => {
                             <MenuIcon />
                         </IconButton>
                         <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            News
+                            Car Point
                         </Typography>
                         <Box className={navContainer}>
                             <Link className={naveItem} to="/"><Button color="inherit">Home</Button></Link>
