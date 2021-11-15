@@ -14,6 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
     const theme = useTheme();
@@ -57,7 +58,7 @@ const Navigation = () => {
                         <Link to="/">Home</Link>
                     </ListItemText>
                     <ListItemText >
-                        <Link to="/about">About</Link>
+                        <Link to="/products">Products</Link>
                     </ListItemText>
                     <ListItemText >
                         <Link to="/services">Services</Link>
@@ -90,7 +91,10 @@ const Navigation = () => {
                         </Typography>
                         <Box className={navContainer}>
                             <Link className={naveItem} to="/"><Button color="inherit">Home</Button></Link>
-                            <Link className={naveItem} to="/login"><Button color="inherit">Login</Button></Link>
+                            <NavLink className={naveItem} to="/products"><Button color="inherit">Products</Button></NavLink>
+                            <NavLink className={naveItem} to="/login">
+                                <Button color="inherit">Login</Button>
+                            </NavLink>
 
                         </Box>
 

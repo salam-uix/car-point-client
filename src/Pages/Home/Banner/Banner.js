@@ -28,7 +28,7 @@ const Banner = () => {
                             <Typography variant="h6" sx={{ fontSize: 14, fontWeight: 300, color: 'white', my: 3 }}>
                                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at
                             </Typography>
-                            <Button variant="contained">Get Appointment</Button>
+                            <Button variant="contained">Explore more</Button>
                         </Box>
 
                     </Grid>

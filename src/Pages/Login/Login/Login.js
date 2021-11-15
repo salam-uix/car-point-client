@@ -1,8 +1,20 @@
 import { Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 
 const Login = () => {
+    const [loginData, setLoginData] = useState({});
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData);
+    }
+    const handleLoginSubmit = e => {
+        e.preventDefault();
+    }
 
     return (
         <Container>
@@ -14,13 +26,13 @@ const Login = () => {
                     <Typography variant="body1" gutterBottom>
                         Login
                     </Typography>
-                    <form>
+                    <form onSubmit={handleLoginSubmit}>
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
                             label="Your email"
                             name="email"
-
+                            onChange={handleOnChange}
                             variant="standard"
                         />
                         <TextField
@@ -29,7 +41,7 @@ const Login = () => {
                             label="Your password"
                             type="password"
                             name="password"
-
+                            onChange={handleOnChange}
                             variant="standard"
                         />
                         <Button
