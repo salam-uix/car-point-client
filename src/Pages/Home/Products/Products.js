@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import Product from '../Product/Product';
 import Typography from '@mui/material/Typography';
 import Navigation from '../../Shared/Navigation/Navigation';
+import Footer from '../../Shared/Footer/Footer';
 
 
 const Products = () => {
@@ -35,6 +36,7 @@ const Products = () => {
                     </Grid>
                 </Container>
             </Box>
+            <Footer></Footer>
         </>
     );
 };

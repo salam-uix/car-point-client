@@ -1,21 +1,26 @@
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
+
+    const { registerUser, isLoading } = useAuth();
+
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newLoginData = { ...loginData };
         newLoginData[field] = value;
         setLoginData(newLoginData);
-        console.log(newLoginData)
+        // console.log(newLoginData)
     }
     const handleLoginSubmit = e => {
         if (loginData.password !== loginData.password2) {
-            alert('Your did not match')
+            Alert('Your did not match')
         }
+        registerUser(loginData.email, loginData.password);
         e.preventDefault();
     }
 
@@ -31,7 +36,7 @@ const Register = () => {
                     <Typography variant="body1" gutterBottom>
                         Login
                     </Typography>
-                    <form onSubmit={handleLoginSubmit}>
+                    {!isLoading && <form onSubmit={handleLoginSubmit}>
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
@@ -68,8 +73,8 @@ const Register = () => {
                         <NavLink style={{ textDecoration: 'none' }} to="/login">
                             <Button variant="text">Already registerd? Please Login</Button>
                         </NavLink>
-                    </form>
-
+                    </form>}
+                    {isLoading && <CircularProgress />}
                 </Grid>
 
             </Grid>

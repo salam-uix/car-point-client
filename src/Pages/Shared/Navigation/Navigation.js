@@ -15,8 +15,10 @@ import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Navigation = () => {
+    const { user, logout } = useAuth();
     const theme = useTheme();
     const useStyle = makeStyles({
         naveItem: {
@@ -92,9 +94,13 @@ const Navigation = () => {
                         <Box className={navContainer}>
                             <Link className={naveItem} to="/"><Button color="inherit">Home</Button></Link>
                             <NavLink className={naveItem} to="/products"><Button color="inherit">Products</Button></NavLink>
-                            <NavLink className={naveItem} to="/login">
-                                <Button color="inherit">Login</Button>
-                            </NavLink>
+                            {user?.email ?
+                                <Button onClick={logout} color="inherit">Logout</Button>
+                                :
+                                <NavLink className={naveItem} to="/login">
+                                    <Button color="inherit">Login</Button>
+                                </NavLink>
+                            }
 
                         </Box>
 
