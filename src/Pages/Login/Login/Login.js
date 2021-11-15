@@ -1,12 +1,18 @@
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router';
+import { NavLink, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { user, loginUser, isLoading, authError } = useAuth();
+    const { user, loginUser, signInWithGoogle, isLoading, authError } = useAuth();
+
+    const location = useLocation();
+    const history = useHistory();
+
+
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -15,8 +21,12 @@ const Login = () => {
         setLoginData(newLoginData);
     }
     const handleLoginSubmit = e => {
-        loginUser(loginData.email, loginData.password)
+        loginUser(loginData.email, loginData.password, location, history);
         e.preventDefault();
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle(location, history)
     }
 
     return (
@@ -35,7 +45,7 @@ const Login = () => {
                             id="standard-basic"
                             label="Your email"
                             name="email"
-                            onChange={handleOnChange}
+                            onBlur={handleOnChange}
                             variant="standard"
                         />
                         <TextField
@@ -44,7 +54,7 @@ const Login = () => {
                             label="Your password"
                             type="password"
                             name="password"
-                            onChange={handleOnChange}
+                            onBlur={handleOnChange}
                             variant="standard"
                         />
                         <Button
@@ -60,6 +70,8 @@ const Login = () => {
                         {user?.email && <Alert severity="success">Logged in successfully!</Alert>}
                         {authError && <Alert severity="error">{authError}</Alert>}
                     </form>
+                    <p>------------------------</p>
+                    <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
                 </Grid>
 
             </Grid>

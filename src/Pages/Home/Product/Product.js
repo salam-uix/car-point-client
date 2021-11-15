@@ -4,6 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { NavLink } from 'react-router-dom';
 
 const Product = (props) => {
     const { name, img, price } = props.product;
@@ -25,7 +26,9 @@ const Product = (props) => {
                     </Typography>
                 </CardContent>
             </Card>
-            <Button variant="contained">Order now</Button>
+            <NavLink style={{ textDecoration: 'none' }} to="/ordernow">
+                <Button variant="contained">Order now</Button>
+            </NavLink>
 
         </Grid>
     );
