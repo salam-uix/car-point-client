@@ -7,7 +7,7 @@ const OrderNow = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://afternoon-tundra-98967.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
