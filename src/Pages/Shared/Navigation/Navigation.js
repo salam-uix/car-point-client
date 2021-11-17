@@ -91,9 +91,11 @@ const Navigation = () => {
                         <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             Car Point
                         </Typography>
+
                         <Box className={navContainer}>
                             <Link className={naveItem} to="/"><Button color="inherit">Home</Button></Link>
                             <NavLink className={naveItem} to="/products"><Button color="inherit">Products</Button></NavLink>
+                            <Button color="inherit">Sign in as: {user?.displayName}</Button>
                             {user?.email ?
                                 <Button onClick={logout} color="inherit">Logout</Button>
                                 :

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import Home from './Pages/Home/Home/Home';
+import ManageProducts from './Pages/Home/ManageProducts/ManageProducts';
 import OrderNow from './Pages/Home/OrderNow/OrderNow';
 import Products from './Pages/Home/Products/Products';
 import Login from './Pages/Login/Login/Login';
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/addproduct">
               <AddProduct></AddProduct>
+            </Route>
+            <Route path="/manageProducts">
+              <ManageProducts></ManageProducts>
             </Route>
             <PrivateRoute path="/ordernow/:productId">
               <OrderNow></OrderNow>
