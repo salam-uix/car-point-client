@@ -3,11 +3,11 @@ import { useParams } from 'react-router';
 import Navigation from '../../Shared/Navigation/Navigation';
 
 const OrderNow = () => {
-    // const { productId } = useParams();
+    const { productId } = useParams();
     return (
         <div>
             <Navigation></Navigation>
-            <h1>This is order now page</h1>
+            <h1>This is order now page {productId} </h1>
         </div>
     );
 };

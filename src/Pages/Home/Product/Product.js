@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { NavLink } from 'react-router-dom';
 
 const Product = (props) => {
-    const { name, img, price } = props.product;
+    const { _id, name, img, price } = props.product;
     return (
         <Grid item xs={4} sm={4} md={4}>
             <Card sx={{ minWidth: 275, border: 0, boxShadow: 0 }}>
@@ -26,7 +26,7 @@ const Product = (props) => {
                     </Typography>
                 </CardContent>
             </Card>
-            <NavLink style={{ textDecoration: 'none' }} to="/ordernow">
+            <NavLink style={{ textDecoration: 'none' }} to={`/ordernow/${_id}`}>
                 <Button variant="contained">Order now</Button>
             </NavLink>
 
