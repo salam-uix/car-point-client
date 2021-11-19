@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import AddProduct from './Pages/AddProduct/AddProduct';
-import Dashboard from './Pages/Dashboard/Dashboard';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Home from './Pages/Home/Home/Home';
 import ManageProducts from './Pages/Home/ManageProducts/ManageProducts';
-import OrderNow from './Pages/Home/OrderNow/OrderNow';
+import OrderNow from './Pages/Home/OrderNow/OrderNow/OrderNow';
+import ProceedOrder from './Pages/Home/OrderNow/ProceedOrder/ProceedOrder';
 import Products from './Pages/Home/Products/Products';
 import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
@@ -35,6 +36,9 @@ function App() {
             <PrivateRoute path="/ordernow/:productId">
               <OrderNow></OrderNow>
             </PrivateRoute>
+            <Route path="/proceedOrder">
+              <ProceedOrder></ProceedOrder>
+            </Route>
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>

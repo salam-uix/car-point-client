@@ -88,7 +88,7 @@ const Navigation = () => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1, width: '25%' }}>
                             Car Point
                         </Typography>
 

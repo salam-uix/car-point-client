@@ -16,6 +16,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Grid } from '@mui/material';
+import Orders from '../Orders/Orders';
 
 const drawerWidth = 240;
 
@@ -41,17 +43,7 @@ function Dashboard(props) {
                     </ListItem>
                 ))}
             </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
+
         </div>
     );
 
@@ -87,7 +79,6 @@ function Dashboard(props) {
                 sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
                 aria-label="mailbox folders"
             >
-                {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
                 <Drawer
                     container={container}
                     variant="temporary"
@@ -120,7 +111,14 @@ function Dashboard(props) {
             >
                 <Toolbar />
                 <Typography paragraph>
-                    Content here
+                    <Grid container spacing={2}>
+                        <Grid item xs={8}>
+
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Orders></Orders>
+                        </Grid>
+                    </Grid>
                 </Typography>
             </Box>
         </Box>
