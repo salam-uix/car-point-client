@@ -12,7 +12,7 @@ const ProceedOrder = () => {
     return (
         <div>
             <div className="col-xs-12 col-sm-12 col-md-4 gx-5">
-                {/* <div className="bg-white rounded-bg"></div> */}
+                <h1>Proceed order</h1>
             </div>
         </div>
     );
