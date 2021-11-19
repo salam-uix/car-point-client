@@ -97,7 +97,12 @@ const Navigation = () => {
                             <NavLink className={naveItem} to="/products"><Button color="inherit">Products</Button></NavLink>
                             <Button color="inherit">Sign in as: {user?.displayName}</Button>
                             {user?.email ?
-                                <Button onClick={logout} color="inherit">Logout</Button>
+                                <Box>
+                                    <NavLink className={naveItem} to="/dashboard">
+                                        <Button color="inherit">Dashboard</Button>
+                                    </NavLink>
+                                    <Button onClick={logout} color="inherit">Logout</Button>
+                                </Box>
                                 :
                                 <NavLink className={naveItem} to="/login">
                                     <Button color="inherit">Login</Button>
